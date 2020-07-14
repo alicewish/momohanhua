@@ -1,0 +1,330 @@
+#主题
+theme: 'normal'
+#theme: 'dark'
+#theme: 'gray'
+#theme: 'qdarkstyle'
+theme_setting:
+  icon_color: 'gray'
+  icon_color_active: 'orange'
+view_setting:
+  #表格行颜色交错
+  #  AlternatingRowColors: true
+  AlternatingRowColors: false
+  EnableHighDpiScaling: false
+audio_setting:
+  amplify: false
+  min_silence_len: 120
+  dBFS_deduction: -30
+  min_length: 50
+#默认字体
+music_setting:
+  background_music: 'The_High_Line.mp3'
+  coefficient: 0.02
+video_setting:
+  pic_dura: 1
+  whiten_dura: 0.6
+  silence_dura: 0.2
+#  resize_mode: full
+  resize_mode: clear
+#pitch: normal
+pitch: ftm
+#pitch: mtf
+Font_name:
+  Comic: 微软雅黑
+  Manga: 方正正准黑
+  Manhua: 微软雅黑
+#默认字体转换比例
+Font_ratio:
+  Comic: 1.35
+  Manga: 1
+  Manhua: 0.6
+Default:
+  #是否隐藏程序标签栏
+  hide_tab: true
+  #  hide_tab: false
+  #程序窗口透明度
+  window_opacity: 1
+  #图片展示的宽（200～800）
+  display_width: 800
+  #图片展示的长（320～1280）
+  display_height: 1280
+  #x系数为日漫-1其他漫画1，含义为从左到右重要性
+  #y系数，含义为从上到下重要性
+  coy: 1
+  #标记字号
+  mark_size: 40
+  #标号过程中的涂白层透明度
+  alpha: 0.75
+  #渐变框（包括框外字）描边厚度
+  outline_thickness: 25
+  #紧邻对话框的距离
+  neighbor_distance: 5
+  #颜色区域的最小值
+  chunk_area: 100
+  #框架分析参数
+  #框架长度最低比例
+  grid_ratio: 0.98
+  #框架最低厚度
+  thickness_min: 1
+  #框架边缘比例
+  edge_ratio: 0.135
+  #框架最小宽度
+  grid_width_min: 100
+  #框架最小高度
+  grid_height_min: 100
+  #是否有黑白两色框架
+  black_and_white_frame: false
+  #是否每页有不同颜色的框架
+  adaptive_frame: false
+  #分析完白色框架后是否用黑色填充框架
+  #  add_frame: true
+  add_frame: false
+  #分析完框架后是否标号
+  mark_frame: true
+  #  mark_frame: false
+  #是否启用线条加粗
+  #  enhance_line: true
+  enhance_line: false
+  #在OCR步骤时是否生成涂白图片
+  generate_whiten_on_ocr: false
+  #在OCR步骤时是否始终重新生成ocr文件
+  force_ocr: true
+  #  force_ocr: false
+  #在OCR步骤时是否始终重新生成docx文件
+  force_docx: true
+  #  force_docx: false
+  #是否启用校对坐标
+  #  fix_coordinates: true
+  fix_coordinates: false
+  #在OCR步骤时是否检查文本对齐方式
+  check_align: false
+  #在OCR步骤时是否有数字要识别
+  #  has_nums: true
+  has_nums: false
+  #在结果可读化步骤时是否给气泡标号
+  mark_bubble: true
+  #  mark_bubble: false
+  #在填字时是否把标点转为半角
+  convert2semiangle: true
+  #  convert2semiangle: false
+  #对话框识别
+  #1、对话框最小面积、最小周长和最小厚度
+  min_area: 2100
+  min_perimeter: 140
+  min_thickness: 15
+  #对话框每一行或列的最小面积、最小周长、最小厚度、最大面积、最大周长和最大厚度
+  row_min_area: 300
+  row_min_perimeter: 120
+  row_min_thickness: 10
+  row_max_area: 9000
+  row_max_perimeter: 2000
+  row_max_thickness: 40
+  #对话框内文本块的最小面积、最小周长、最小厚度、最大面积、最大周长和最大厚度
+  block_min_area: 100
+  block_min_perimeter: 80
+  block_min_thickness: 5
+  block_max_area: 1000000
+  block_max_perimeter: 9000
+  block_max_thickness: 500
+  #2、对话框最小宽度和最小高度，相对整张图的最大宽度比例和最大高度比例
+  min_width: 40
+  min_height: 40
+  max_width_ratio: 0.98
+  max_height_ratio: 0.98
+  #3、轮廓面积相较图片面积以及面积/周长的平方
+  portion_ratio_min: 0.0001
+  portion_ratio_max: 0.1
+  area_perimeter_ratio_min: 0.00001
+  #4、面积验算
+  letter_n_bubble_ratio_min: 0.8 #计算(白)底+(黑)字部分与轮廓面积比
+  letter_ratio_min: 0.01 #计算(黑)字与轮廓面积比
+  bubble_ratio_min: 0.6 #计算(白)底与轮廓面积比
+  sample_ratio_differ_max: 0.2
+  erosion_ratio_min: 0.3 #计算气泡缩小一圈（10像素）后的大小与轮廓面积比
+  bigger_letter_ratio_min: 0.05 #计算(黑)字扩大90像素后与轮廓面积比
+  erosion_pixel_area_min: 300 #计算气泡缩小一圈（10像素）后的大小
+  #单个对话框内所有文字的最小面积
+  min_pixel_area: 30
+  #5、内层外层验算
+  #对话框边缘是否有黑框
+  has_black_border: true #会被Preset预设覆盖
+  #对话框外一圈的黑色像素厚度下限和对话框内一圈的黑色像素厚度上限
+  #美漫版本
+  comic_outline_ratio_min: 1.2
+  comic_inline_ratio_max: 0.05
+  #日漫版本
+  manga_outline_ratio_min: 0.1
+  manga_inline_ratio_max: 0.3
+  #国漫版本
+  manhua_outline_ratio_min: 0.1
+  manhua_inline_ratio_max: 0.3
+  #6、形状验算
+  #矩形
+  #圆角矩形
+  #  has_round_rectangle: true
+  has_round_rectangle: false
+  #圆形
+  #椭圆
+  #7、字号验算
+  #对话框内最大字号
+  max_font_size: 100
+  #默认字号
+  default_font_size: 30
+  #默认字间距比例
+  default_kerning_ratio: 0.1
+  #默认行距比例
+  default_spacing_ratio: 0.135
+  #最小字体高度
+  min_font_height: 18
+current_preset_name: Comic2
+#current_preset_name: Manga1
+custom_preset_dict:
+  Comic1:
+    #5、内层外层验算
+    #对话框边缘是否有黑框
+    has_black_border: true
+    #对话框内最大字号
+    max_font_size: 100
+    #默认字号
+    default_font_size: 30
+    #默认行距比例
+    default_spacing_ratio: 0.135
+  Comic2:
+    #5、内层外层验算
+    #对话框边缘是否有黑框
+    has_black_border: false
+    #对话框内最大字号
+    max_font_size: 50
+  Manga1:
+    #对话框每一行或列的最小面积、最小周长、最小厚度、最大面积、最大周长和最大厚度
+    row_min_area: 30
+    row_min_perimeter: 10
+    row_min_thickness: 1
+    row_max_area: 9000
+    row_max_perimeter: 2000
+    row_max_thickness: 40
+    #对话框内文本块的最小面积、最小周长、最小厚度、最大面积、最大周长和最大厚度
+    block_min_area: 100
+    block_min_perimeter: 50
+    block_min_thickness: 3
+    block_max_area: 1000000
+    block_max_perimeter: 9000
+    block_max_thickness: 500
+    #2、对话框最小宽度和最小高度，相对整张图的最大宽度比例和最大高度比例
+    min_width: 20
+    min_height: 20
+    max_width_ratio: 0.98
+    max_height_ratio: 0.98
+    #3、轮廓面积相较图片面积以及面积/周长的平方
+    portion_ratio_min: 0.0001
+    portion_ratio_max: 0.1
+    area_perimeter_ratio_min: 0.00001
+    #4、面积验算
+    letter_n_bubble_ratio_min: 0.8 #计算(白)底+(黑)字部分与轮廓面积比
+    letter_ratio_min: 0.01 #计算(黑)字与轮廓面积比
+    bubble_ratio_min: 0.6 #计算(白)底与轮廓面积比
+    sample_ratio_differ_max: 0.2
+    erosion_ratio_min: 0.3 #计算气泡缩小一圈（10像素）后的大小与轮廓面积比
+    bigger_letter_ratio_min: 0.05 #计算(黑)字扩大90像素后与轮廓面积比
+    erosion_pixel_area_min: 300 #计算气泡缩小一圈（10像素）后的大小
+    #单个对话框内所有文字的最小面积
+    min_pixel_area: 30
+    #5、内层外层验算
+    #对话框边缘是否有黑框
+    has_black_border: true
+    #对话框外一圈的黑色像素厚度下限和对话框内一圈的黑色像素厚度上限
+    #日漫版本
+    manga_outline_ratio_min: 0.1
+    manga_inline_ratio_max: 0.3
+    #7、字号验算
+    #对话框内最大字号
+    max_font_size: 26
+  Manga2:
+    #5、内层外层验算
+    #对话框边缘是否有黑框
+    has_black_border: false
+    #对话框外一圈的黑色像素厚度下限和对话框内一圈的黑色像素厚度上限
+    #日漫版本
+    manga_outline_ratio_min: 0.1
+    manga_inline_ratio_max: 0.3
+    #7、字号验算
+    #对话框内最大字号
+    max_font_size: 70
+#对话框气泡文字颜色词典
+#ffffff是白色，000000是黑色，数字是色彩范围，类似容差
+color_pattern_dict:
+  Comic:
+    - - 'ffffff-12'
+      - '000000-60'
+  Manhua:
+    - - 'ffffff-15'
+      - '000000-60'
+  #  - - 'ffffff-30'
+  #    - '4f1a20-30'
+  Manga:
+    - - 'ffffff-15'
+      - '000000-60'
+  #  - - '000000-60'
+  #    - 'ffffff-60'
+  Comici:
+    - - 'ee1b24-30'
+      - '000000-50'
+    - - '818286-7' # Gunsmoke
+      - '000000-60'
+  Die:
+    - - '000000-15'
+      - 'ffffff-30'
+    - - '180f2a-10'
+      - 'ffffff-60'
+    - - '1e0e35-10'
+      - 'ffffff-60'
+    - - '1b1213-10'
+      - 'ffffff-60'
+    - - '110e19-10'
+      - 'ffffff-60'
+  Drifter:
+    - - '231f20-10'
+      - 'ffffff-30'
+  Eternal Empire:
+#    - - 'ffffff-7'
+#      - '909193-10' # Mountain Mist
+#    - - 'ffffff-30'
+#      - '999a9c-10'
+    - - 'ffffff-30'
+      - 'bbbbbb-10'
+#    - - 'ffffff-30'
+#      - 'c2c3c7-10'
+#    - - 'ffffff-7'
+#      - '999999-10'
+  Exorsisters:
+    - - 'fffac0-30'
+      - '000000-50'
+    - - 'ee1b24-30'
+      - '000000-50'
+  #  Naomi:
+  #  - - '99cab5-60'
+  #    - '000000-50'
+  Symmetry:
+    - - '000000-30'
+      - 'faa21c-30'
+    - - 'fffeec-12'
+      - '5f8793-12'
+    - - '84d2df-12'
+      - '000000-60'
+    - - '5e8690-12'
+      - 'ffffff-12'
+  Wayward:
+    - - - 'ada1d1'
+        - 'bbd5ee'
+      - '000000-50'
+#漫画框架颜色词典
+frame_color_dict:
+  Common: 'ffffff-30'#默认白色框架
+  Eternal Empire: '000000-10'
+  New Avengers: '000000-60'
+  Suicide Risk: '000000-60'
+  Uncanny X-Men: '000000-60'
+help: |
+  帮助
+  1. 机器码和电脑、用户名有关，修改用户名会改变机器码，需先改用户名再提交机器码。
+  2. 程序将读取符合条件的第一个文件夹进行处理。
